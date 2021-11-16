@@ -3,7 +3,12 @@
 ## linux
 
 
-## mac
+## macos
 
 
-## win
+## windows
+
+
+## vagrant
+
+### k8s cluster for ubuntu
