@@ -1,0 +1,20 @@
+version: '3'
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql
+    command:
+      --default-authentication-plugin=mysql_native_password
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_general_ci
+    restart: always
+    environment:
+      TZ: Asia/Shanghai
+      MYSQL_ROOT_PASSWORD: '123456'
+    ports:
+      - 3306:3306
+    volumes:
+      - /usr/local/docker/mysql/data:/var/lib/mysql
+      - /usr/local/docker/mysql/conf:/etc/mysql/conf.d
+      - /usr/local/docker/mysql/logs:/logs
+    
