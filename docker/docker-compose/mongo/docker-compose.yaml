@@ -1,0 +1,16 @@
+version: '3'
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    restart: always
+    environment:
+      TZ: Asia/Shanghai
+      MONGODB_INITDB_ROOT_USERNAME: admin
+      MONGODB_INITDB_ROOT_PASSWORD: admin
+    ports:
+      - 27017:27017
+    volumes:
+      - /usr/local/docker/mongo/db:/data/db
+      - /usr/local/docker/mongo/log:/var/log/mongodb
+    
