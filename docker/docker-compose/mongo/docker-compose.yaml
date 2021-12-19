@@ -6,6 +6,7 @@ services:
     restart: always
     environment:
       TZ: Asia/Shanghai
+      MONGODB_INITDB_DATABASE: admin
       MONGODB_INITDB_ROOT_USERNAME: admin
       MONGODB_INITDB_ROOT_PASSWORD: admin
     ports:
